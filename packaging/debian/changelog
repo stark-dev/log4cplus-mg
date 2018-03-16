@@ -1,0 +1,80 @@
+log4cplus (1.1.2-3.2-etn2) unstable; urgency=medium
+
+  * rename liblog4cplus.pc to log4cplus.pc 
+
+ -- Gerald Guillaume <GeraldGuillaume@eaton.com>  Thu, 1 Mar 2018 09:36:47 +0200
+
+log4cplus (1.1.2-3.2-etn1) unstable; urgency=medium
+
+  * Add pkgconfig support
+
+ -- Gerald Guillaume <GeraldGuillaume@eaton.com>  Mon, 07 Feb 2018 09:36:47 +0200
+
+log4cplus (1.1.2-3.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Ensure C++11 methods are present in the library. (Closes: #814905)
+
+ -- James Cowgill <jcowgill@debian.org>  Mon, 08 Aug 2016 11:06:16 +0000
+
+log4cplus (1.1.2-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Replaces harcoded triplet by DEB_HOST_MULTIARCH for library symlink
+    (Closes: #801305).
+
+ -- Christian Marillat <marillat@debian.org>  Thu, 10 Dec 2015 15:48:34 +0100
+
+log4cplus (1.1.2-3) unstable; urgency=low
+
+  * Rebuild against unstable for library transition (closes: #796668)
+
+ -- Andrew Pollock <apollock@debian.org>  Sun, 04 Oct 2015 21:04:05 +1000
+
+log4cplus (1.1.2-2) experimental; urgency=medium
+
+  * debian/liblog4cplus-dev.install: don't be so selective about what in
+    /usr/include/log4cplus gets added
+
+ -- Andrew Pollock <apollock@debian.org>  Sun, 23 Aug 2015 20:06:33 +1000
+
+log4cplus (1.1.2-1) experimental; urgency=low
+
+  * New upstream release
+  * Incorporate previous NMUs (closes: #750553, #756691)
+  * debian/control: bumped Standards-Version (no changes), increased versioned
+    Build-Dependency on debhelper to 9
+  * debian/compat: bump to 9 to get proper buildflags support
+  * debian/*.install: added globbing to deal with architectures
+  * debian/liblog4cplus9.install: added missing symlink to placate Lintian
+
+ -- Andrew Pollock <apollock@debian.org>  Mon, 10 Aug 2015 21:23:23 +1000
+
+log4cplus (1.0.4-3) unstable; urgency=low
+
+  * debian/{rules,control}: add dh-autoreconf (closes: #734220)
+
+ -- Andrew Pollock <apollock@debian.org>  Mon, 24 Feb 2014 10:19:59 +1000
+
+log4cplus (1.0.4-2) unstable; urgency=low
+
+  * Convert to using debhelper
+
+ -- Andrew Pollock <apollock@debian.org>  Tue, 24 Jan 2012 21:54:01 -0800
+
+log4cplus (1.0.4-1) unstable; urgency=low
+
+  [ Eric Kom ]
+  * New upstream release
+  * Fix the download upstream source link for debian/watch file.
+
+  [ Andrew Pollock ]
+  * Generally clean up and make Lintian-clean
+
+ -- Andrew Pollock <apollock@debian.org>  Wed, 18 Jan 2012 22:38:12 -0800
+
+log4cplus (1.0.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #578387)
+
+ -- Daigo Moriwaki <daigo@debian.org>  Fri, 16 Apr 2010 17:46:34 +0900

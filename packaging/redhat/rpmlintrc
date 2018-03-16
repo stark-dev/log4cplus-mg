@@ -1,0 +1,4 @@
+addFilter("cxxtools-demo.*E: devel-file-in-non-devel-package")
+setBadness('shlib-policy-name-error', 0)
+setBadness('no-pkg-config-provides', 0)
+setBadness('devel-file-in-non-devel-package', 0)

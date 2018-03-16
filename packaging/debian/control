@@ -1,0 +1,45 @@
+Source: log4cplus
+Section: libs
+Priority: extra
+Maintainer: Andrew Pollock <apollock@debian.org>
+Uploaders: Daigo Moriwaki <daigo@debian.org>, Eric Kom <erickom@kom.za.net>
+Build-Depends: debhelper (>= 9), dh-autoreconf, libtool, automake, doxygen
+Standards-Version: 3.9.6
+Homepage: http://log4cplus.sourceforge.net
+Vcs-Browser: http://git.debian.org/?p=collab-maint/log4cplus.git;a=summary
+Vcs-Git: git://git.debian.org/collab-maint/log4cplus.git
+
+Package: liblog4cplus-1.1-9
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: C++ logging API modeled after the Java log4j API - shared library
+ log4cplus is a simple to use C++ logging API providing thread-safe,
+ flexible, and arbitrarily granular control over log management and
+ configuration.  It is modeled after the Java log4j API.
+
+Package: liblog4cplus-dev
+Architecture: any
+Section: libdevel
+Depends: liblog4cplus-1.1-9 (= ${binary:Version}), ${misc:Depends}
+Description: C++ logging API modeled after the Java log4j API - development library
+ log4cplus is a simple to use C++ logging API providing thread-safe,
+ flexible, and arbitrarily granular control over log management and
+ configuration.  It is modeled after the Java log4j API.
+ .
+ This package contains the header files and static library for 
+ developers.
+
+Package: liblog4cplus-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${misc:Depends}, liblog4cplus-1.1-9 (= ${binary:Version})
+Description: C++ logging API modeled after the Java log4j API - debug library
+ log4cplus is a simple to use C++ logging API providing thread-safe,
+ flexible, and arbitrarily granular control over log management and
+ configuration.  It is modeled after the Java log4j API.
+ .
+ This package is provided primarily to provide a backtrace with names
+ in a debugger, this makes it somewhat easier to interpret core
+ dumps.  Most people will not need this package.
+

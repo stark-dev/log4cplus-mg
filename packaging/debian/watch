@@ -1,0 +1,9 @@
+# you can run the "uscan" command to check for upstream updates and more.
+# See uscan(1) for format
+
+# Compulsory line, this is a version 3 file
+version=3
+
+# A South African Mirror, one of the sourceforge mirrors.
+#http://tenet.dl.sourceforge.net/project/log4cplus/log4cplus-stable/(\d+\.\d+\.\d+)/log4cplus-(\d+\.\d+\.\d+)\.tar\.bz2 debian uupdate
+http://sf.net/log4cplus/log4cplus-(.+)\.tar\.bz2

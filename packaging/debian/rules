@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+export DEB_CXXFLAGS_MAINT_APPEND := --std=c++11
+DEB_HOST_MULTIARCH      := $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+UPSTREAM_VERSION        := $(shell dpkg-parsechangelog | sed -n 's/^Version: *\([0-9]*:\)\?\([^~]*\)\(~.*\)\?-.*$$/\2/ p')
+d = $(CURDIR)/debian
+
+%:
+	dh $@ --with autoreconf
+
+override_dh_strip:
+	dh_strip --dbg-package=liblog4cplus-dbg
+
+override_dh_install:
+	sed -i "/dependency_libs/ s/'.*'/''/" `find . -name '*.la'`
+	sed -e "s/@DEB_HOST_MULTIARCH@/$(DEB_HOST_MULTIARCH)/g" $(d)/liblog4cplus-dev.install.in > $(d)/liblog4cplus-dev.install
+	sed -e "s/@DEB_HOST_MULTIARCH@/$(DEB_HOST_MULTIARCH)/g;s/@VERSION@/$(UPSTREAM_VERSION)/g" $(d)/log4cplus.pc.in > $(d)/log4cplus.pc
+	dh_install
+
+override_dh_link:
+	dh_link -pliblog4cplus-dev \
+	usr/lib/$(DEB_HOST_MULTIARCH)/liblog4cplus-1.1.so.9.0.0 \
+	usr/lib/$(DEB_HOST_MULTIARCH)/liblog4cplus-1.1.so

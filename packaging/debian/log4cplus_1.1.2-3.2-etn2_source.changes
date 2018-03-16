@@ -1,0 +1,27 @@
+Format: 1.8
+Date: Thu, 1 Mar 2018 09:36:47 +0200
+Source: log4cplus
+Binary: liblog4cplus-1.1-9 liblog4cplus-dev liblog4cplus-dbg
+Architecture: source
+Version: 1.1.2-3.2-etn2
+Distribution: unstable
+Urgency: medium
+Maintainer: Andrew Pollock <apollock@debian.org>
+Changed-By: Gerald Guillaume <GeraldGuillaume@eaton.com>
+Description:
+ liblog4cplus-1.1-9 - C++ logging API modeled after the Java log4j API - shared library
+ liblog4cplus-dbg - C++ logging API modeled after the Java log4j API - debug library
+ liblog4cplus-dev - C++ logging API modeled after the Java log4j API - development li
+Changes:
+ log4cplus (1.1.2-3.2-etn2) unstable; urgency=medium
+ .
+   * rename liblog4cplus.pc to log4cplus.pc
+Checksums-Sha1:
+ e4de7f10fd7c597cffec8d408ac300d65d818f8f 1264 log4cplus_1.1.2-3.2-etn2.dsc
+ acb313e65c905b83355f41d8d549f4093759744f 4196 log4cplus_1.1.2-3.2-etn2.debian.tar.xz
+Checksums-Sha256:
+ 0b8f52a202efe817186f877869668e50c6e53d329d2b6f7f5b00e8f90827ab0e 1264 log4cplus_1.1.2-3.2-etn2.dsc
+ 2947b996a7db0cb5ee998e9d685d172bb8bd0dbb98526a898aa2c01eef75b98a 4196 log4cplus_1.1.2-3.2-etn2.debian.tar.xz
+Files:
+ 9c91bc95d28376188c08cbe870c56e98 1264 libs extra log4cplus_1.1.2-3.2-etn2.dsc
+ 00d272645c5e2bd2f5e4b4300eeefb65 4196 libs extra log4cplus_1.1.2-3.2-etn2.debian.tar.xz

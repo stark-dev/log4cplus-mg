@@ -1,0 +1,5 @@
+usr/lib/*/liblog4cplus.so
+usr/include/log4cplus/*
+usr/lib/*/liblog4cplus.a
+usr/lib/*/liblog4cplus.la
+debian/log4cplus.pc                      usr/lib/@DEB_HOST_MULTIARCH@/pkgconfig
