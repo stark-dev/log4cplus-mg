@@ -86,28 +86,28 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,755)
-%attr(755,root,root) %_libdir/lib*.so*
-%attr(644,root,root) %_libdir/*.la
+%attr(755,root,root) %{_libdir}/lib*.so*
+%attr(644,root,root) %{_libdir}/*.la
 
 %files devel
 %defattr(-,root,root,755)
-%dir %prefix/include/log4cplus
-%dir %prefix/include/log4cplus/boost
-%dir %prefix/include/log4cplus/config
-%dir %prefix/include/log4cplus/helpers
-%dir %prefix/include/log4cplus/internal
-%dir %prefix/include/log4cplus/spi
-%dir %prefix/include/log4cplus/thread
-%dir %prefix/include/log4cplus/thread/impl
-%prefix/include/log4cplus/*.h
-%prefix/include/log4cplus/helpers/*.h
-%prefix/include/log4cplus/spi/*.h
-%prefix/include/log4cplus/boost/*.hxx
-%prefix/include/log4cplus/config.hxx
-%prefix/include/log4cplus/config/defines.hxx
-%prefix/include/log4cplus/internal/*.h
-%prefix/include/log4cplus/thread/impl/*.h
-%prefix/include/log4cplus/thread/*.h
-%attr(644,root,root) 
-%_libdir/*.a
-%_libdir/pkgconfig/log4cplus.pc
+%dir %{prefix}/include/log4cplus
+%dir %{prefix}/include/log4cplus/boost
+%dir %{prefix}/include/log4cplus/config
+%dir %{prefix}/include/log4cplus/helpers
+%dir %{prefix}/include/log4cplus/internal
+%dir %{prefix}/include/log4cplus/spi
+%dir %{prefix}/include/log4cplus/thread
+%dir %{prefix}/include/log4cplus/thread/impl
+%{prefix}/include/log4cplus/*.h
+%{prefix}/include/log4cplus/helpers/*.h
+%{prefix}/include/log4cplus/spi/*.h
+%{prefix}/include/log4cplus/boost/*.hxx
+%{prefix}/include/log4cplus/config.hxx
+%{prefix}/include/log4cplus/config/defines.hxx
+%{prefix}/include/log4cplus/internal/*.h
+%{prefix}/include/log4cplus/thread/impl/*.h
+%{prefix}/include/log4cplus/thread/*.h
+%attr(644,root,root)
+%{_libdir}/*.a
+%{_libdir}/pkgconfig/log4cplus.pc
