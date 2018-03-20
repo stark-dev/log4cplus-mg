@@ -8,7 +8,7 @@ Release: 1
 Summary: log4cplus, C++ logging library
 License: Apache
 Group: Development/Libraries
-Vendor: log4cplus project 
+Vendor: log4cplus project, packaged for 42ITy
 Packager: Yusuke SATO <y-sato@y-sa.to>
 Url: http://log4cplus.sourceforge.net/
 
