@@ -22,6 +22,6 @@ before_script:
 
 script:
  - ./configure --prefix "${HOME}/tmp" PKG_CONFIG_PATH="${HOME}/tmp/lib"
- - make all
- - make install
- - make distcheck
+ - CCACHE_BASEDIR="`pwd`" make -j4 all
+ - CCACHE_BASEDIR="`pwd`" make install
+ - CCACHE_BASEDIR="`pwd`" make distcheck
