@@ -7,10 +7,10 @@ Uploaders: Daigo Moriwaki <daigo@debian.org>, Eric Kom <erickom@kom.za.net>
 Homepage: http://log4cplus.sourceforge.net
 Vcs-Browser: http://git.debian.org/?p=collab-maint/log4cplus.git;a=summary
 Vcs-Git: git://git.debian.org/collab-maint/log4cplus.git
-Build-Depends: debhelper (>= 9), \
-        dh-autoreconf, \
-        libtool, \
-        automake, \
+Build-Depends: debhelper (>= 9),
+        dh-autoreconf,
+        libtool,
+        automake,
         doxygen
 
 Package: liblog4cplus-1.1-9
