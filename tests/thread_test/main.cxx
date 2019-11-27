@@ -79,7 +79,7 @@ main()
     log4cplus::initialize();
     try
     {    
-        auto_ptr<SlowObject> slowObject(new SlowObject());
+        unique_ptr<SlowObject> slowObject(new SlowObject());
         log4cplus::helpers::LogLog::getLogLog()->setInternalDebugging(true);
         Logger logger = Logger::getInstance(LOG4CPLUS_TEXT("main"));
         Logger::getRoot().setLogLevel(INFO_LOG_LEVEL);
@@ -87,7 +87,7 @@ main()
         tcout << "main Priority: " << getLogLevelManager().toString(ll) << endl;
 
         helpers::SharedObjectPtr<Appender> append_1(new ConsoleAppender());
-        append_1->setLayout( std::auto_ptr<Layout>(new log4cplus::TTCCLayout()) );
+        append_1->setLayout( std::unique_ptr<Layout>(new log4cplus::TTCCLayout()) );
         Logger::getRoot().addAppender(append_1);
         append_1->setName(LOG4CPLUS_TEXT("cout"));
 
