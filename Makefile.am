@@ -1,4 +1,7 @@
 ACLOCAL_AMFLAGS = -I m4
+AM_CXXFLAGS = \
+    -std=c++11
+
 EXTRA_DIST = ChangeLog log4cplus.pc.in
 SUBDIRS = include src loggingserver tests
 if QT
