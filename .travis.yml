@@ -11,6 +11,9 @@ cache:
 os:
  - linux
 
+dist:
+- bionic
+
 compiler:
  - clang
  - gcc

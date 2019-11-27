@@ -19,7 +19,7 @@ main()
     SharedAppenderPtr append_1(
         new RollingFileAppender(LOG4CPLUS_TEXT("Test.log"), 5*1024, 5));
     append_1->setName(LOG4CPLUS_TEXT("First"));
-    append_1->setLayout( std::auto_ptr<Layout>(new TTCCLayout()) );
+    append_1->setLayout( std::unique_ptr<Layout>(new TTCCLayout()) );
     Logger::getRoot().addAppender(append_1);
 
     Logger root = Logger::getRoot();

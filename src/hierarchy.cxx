@@ -216,9 +216,9 @@ Hierarchy::resetConfiguration()
 
 
 void 
-Hierarchy::setLoggerFactory(std::auto_ptr<spi::LoggerFactory> factory) 
+Hierarchy::setLoggerFactory(std::unique_ptr<spi::LoggerFactory> factory) 
 { 
-    defaultFactory = factory; 
+    defaultFactory = std::move(factory); 
 }
 
 
