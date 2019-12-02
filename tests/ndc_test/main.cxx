@@ -21,7 +21,7 @@ main()
         SharedObjectPtr<Appender> append_1(new ConsoleAppender());
         append_1->setName(LOG4CPLUS_TEXT("First"));
         append_1->setLayout(
-            std::auto_ptr<Layout>(
+            std::unique_ptr<Layout>(
                 new log4cplus::PatternLayout(
                     LOG4CPLUS_TEXT ("%-5p %c <%x> - %m%n"))));
         Logger::getRoot().addAppender(append_1);

@@ -189,10 +189,10 @@ InternalLoggingEvent::getType() const
 
 
 
-std::auto_ptr<InternalLoggingEvent>
+std::unique_ptr<InternalLoggingEvent>
 InternalLoggingEvent::clone() const
 {
-    std::auto_ptr<InternalLoggingEvent> tmp(new InternalLoggingEvent(*this));
+    std::unique_ptr<InternalLoggingEvent> tmp(new InternalLoggingEvent(*this));
     return tmp;
 }
 

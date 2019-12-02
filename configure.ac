@@ -157,6 +157,8 @@ dnl Checks for programs.
 
 AX_COMPILER_VENDOR
 
+AS_VAR_APPEND([CXXFLAGS], [" -std=c++11"])
+
 AS_IF([test "x$enable_warnings" = "xyes"],
   [AS_CASE([$ax_cv_cxx_compiler_vendor],
     dnl Skip all warnings detection for Solaris Studio compilers. It
